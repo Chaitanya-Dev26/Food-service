@@ -14,19 +14,19 @@ const Footer = () => {
               Providing nutritious, delicious food services to educational institutions and events.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-brand-green transition-colors">
+              <a href="#" className="flex items-center justify-center w-7 h-7 rounded-full bg-[#1877F2] text-white">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-brand-green transition-colors">
+              <a href="#" className="flex items-center justify-center w-7 h-7 rounded-full bg-black text-white">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-brand-green transition-colors">
+              <a href="#" className="flex items-center justify-center w-7 h-7 rounded-full bg-[#E4405F] text-white">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-brand-green transition-colors">
+                <a href="#" className="flex items-center justify-center w-7 h-7 rounded-full bg-[#0077B5] text-white">
                 <Linkedin size={20} />
               </a>
-            </div>
+</div>
           </div>
           
           <div>
