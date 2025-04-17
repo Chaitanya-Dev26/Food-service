@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import { UserIcon } from '@heroicons/react/24/solid';
 
 const Hero = () => {
   return (
@@ -23,11 +24,20 @@ const Hero = () => {
               </Button>
             </div>
             <div className="mt-8 flex items-center justify-center lg:justify-start gap-6">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200"></div>
-                ))}
-              </div>
+            <div className="flex -space-x-2">
+              {[1, 2, 3, 4].map((i) => (
+                <div
+                  key={i}
+                  className="w-10 h-10 rounded-full border-2 border-white overflow-hidden"
+                >
+                  <img
+                    src={`/avatars/person${i}.jpg`} // Path to images in the public folder
+                    alt={`Person ${i}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
               <div className="text-sm">
                 <span className="font-bold text-brand-green">50+</span> schools & colleges trust us
               </div>
