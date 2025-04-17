@@ -140,7 +140,7 @@ const MenuShowcase = () => {
                   </div>)}
               </div>
               <div className="text-center mt-12">
-                <Button className="bg-brand-green hover:bg-brand-green-light text-[#232323]">
+                <Button className="bg-brand-dark hover:bg-brand-dark/90">
                   View Full {category.label} Menu
                 </Button>
               </div>

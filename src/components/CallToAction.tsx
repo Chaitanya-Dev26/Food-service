@@ -36,8 +36,11 @@ const CallToAction = () => {
               <Button size="lg" className="bg-white text-brand-dark hover:bg-white/90">
                 Schedule a Consultation
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-                Download Brochure <ArrowRight className="ml-2 h-4 w-4" />
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-black border-gray-200 hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition-colors duration-200" >
+                Download Brochure <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>
