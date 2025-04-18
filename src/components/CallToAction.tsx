@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, School, GraduationCap, PartyPopper, Phone } from "lucide-react";
 
@@ -94,7 +95,7 @@ const CallToAction = () => {
                 </div>
 
                 {/* Submit + WhatsApp Section */}
-                <div className="space-y-4"> {/* Increased space here */}
+                <div className="space-y-4">
                   <Button className="w-full bg-brand-dark hover:bg-brand-dark/90">
                     Submit Request
                   </Button>
@@ -104,7 +105,7 @@ const CallToAction = () => {
                   <button 
                     type="button"
                     onClick={openWhatsApp}
-                    className="group text-brand-green flex items-center justify-center gap-2 w-full py-2 transition-all hover:underline hover:scale-105" // Added scale hover effect
+                    className="group text-brand-green flex items-center justify-center gap-2 w-full py-2 transition-all hover:underline hover:scale-105"
                   >
                     <Phone className="h-4 w-4 transform transition-transform duration-300 group-hover:-rotate-12" />
                     Chat with us on WhatsApp
@@ -113,13 +114,18 @@ const CallToAction = () => {
               </form>
             </div>
 
-            {/* Badge */}
-            <div className="absolute -top-6 -right-6 p-4 bg-brand-yellow rounded-lg shadow-xl hidden md:block">
+            {/* Floating Badge with Motion */}
+            <motion.div
+              initial={{ y: 0 }}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-6 -right-6 p-4 bg-brand-yellow rounded-lg shadow-xl hidden md:block"
+            >
               <div className="text-brand-dark text-center font-bold">
                 <div className="text-xl">24hr</div>
                 <div className="text-sm">Response Time</div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
         </div>
