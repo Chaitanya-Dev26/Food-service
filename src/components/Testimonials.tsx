@@ -35,7 +35,7 @@ const Testimonials = () => {
     <section className="py-20 bg-white overflow-hidden" id="testimonials">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="section-heading">What Our Clients Say</h2>
+          <h2 className="section-heading">What Our Costumers Say</h2>
           <p className="section-subheading">
             Hear from schools, colleges, and event organizers who have experienced our services
           </p>

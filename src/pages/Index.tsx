@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
-import MenuShowcase from '@/components/MenuShowcase';
+import ServicePackages from "@/components/ServicePackages";
 import Testimonials from '@/components/Testimonials';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
@@ -14,7 +14,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Services />
-      <MenuShowcase />
+      <ServicePackages />
       <Testimonials />
       <CallToAction />
       <Footer />
