@@ -21,20 +21,20 @@ const CallToAction = () => {
               Join the growing number of educational institutions and event organizers who trust Campus Kitchen Crafter for their food service needs.
             </p>
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="bg-white/20 p-2 rounded-full">
+              <div className="flex items-center gap-3 group transition-all duration-300 hover:translate-x-2">
+                <div className="bg-white/20 p-2 rounded-full group-hover:bg-white/30 transition-all">
                   <School className="h-5 w-5" />
                 </div>
                 <p className="text-white">Custom meal plans for K-12 schools</p>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-white/20 p-2 rounded-full">
+              <div className="flex items-center gap-3 group transition-all duration-300 hover:translate-x-2">
+                <div className="bg-white/20 p-2 rounded-full group-hover:bg-white/30 transition-all">
                   <GraduationCap className="h-5 w-5" />
                 </div>
                 <p className="text-white">Diverse dining options for colleges and universities</p>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-white/20 p-2 rounded-full">
+              <div className="flex items-center gap-3 group transition-all duration-300 hover:translate-x-2">
+                <div className="bg-white/20 p-2 rounded-full group-hover:bg-white/30 transition-all">
                   <PartyPopper className="h-5 w-5" />
                 </div>
                 <p className="text-white">Professional catering for academic and social events</p>
