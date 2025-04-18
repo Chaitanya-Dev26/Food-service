@@ -16,6 +16,7 @@ import {
   Leaf,
   Clock
 } from "lucide-react";
+import { motion } from "framer-motion"; // ✅ Added for animation
 
 const services = [
   {
@@ -136,11 +137,25 @@ const Services = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg md:max-w-[200px]">
+
+              {/* 👇 Floating box with animation */}
+              <motion.div
+                initial={{ y: 0 }}
+                animate={{
+                  y: [0, -5, 0],
+                  transition: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+                whileHover={{ scale: 1.05, rotate: -1 }}
+                className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg md:max-w-[200px] cursor-pointer transition-all"
+              >
                 <div className="text-sm font-medium text-gray-600">Trusted by</div>
                 <div className="text-2xl font-bold text-brand-green">50+ Schools</div>
                 <div className="text-sm text-gray-600">across the country</div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
