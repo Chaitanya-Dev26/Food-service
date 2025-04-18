@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { MenuIcon, X } from "lucide-react";
+import { MenuIcon, X, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -26,17 +25,35 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className="font-medium text-brand-dark hover:text-brand-green transition-colors">Home</Link>
-          <Link to="/services" className="font-medium text-brand-dark hover:text-brand-green transition-colors">Services</Link>
-          <Link to="/menu" className="font-medium text-brand-dark hover:text-brand-green transition-colors">Menu</Link>
-          <Link to="/about" className="font-medium text-brand-dark hover:text-brand-green transition-colors">About Us</Link>
-          <Link to="/contact" className="font-medium text-brand-dark hover:text-brand-green transition-colors">Contact</Link>
+          <Link to="/" className="font-medium text-brand-dark hover:text-brand-green transition-colors relative group">
+            Home
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all group-hover:w-full"></span>
+          </Link>
+          <Link to="/services" className="font-medium text-brand-dark hover:text-brand-green transition-colors relative group">
+            Services
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all group-hover:w-full"></span>
+          </Link>
+          <Link to="/menu" className="font-medium text-brand-dark hover:text-brand-green transition-colors relative group">
+            Menu
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all group-hover:w-full"></span>
+          </Link>
+          <Link to="/about" className="font-medium text-brand-dark hover:text-brand-green transition-colors relative group">
+            About Us
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all group-hover:w-full"></span>
+          </Link>
+          <Link to="/contact" className="font-medium text-brand-dark hover:text-brand-green transition-colors relative group">
+            Contact
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all group-hover:w-full"></span>
+          </Link>
         </nav>
         
-        <div className="hidden md:flex items-center gap-4">
-          <Button className="bg-brand-dark hover:bg-brand-dark/90">
-            Get a Custom Quote
-          </Button>
+        <div className="hidden md:flex items-center">
+          <Link to="/get-a-quote">
+            <Button className="bg-brand-green hover:bg-brand-green/90 transition-all duration-300 hover:scale-105 group">
+              Get a Custom Quote
+              <Quote className="ml-2 h-4 w-4 transition-transform group-hover:rotate-12" />
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -82,13 +99,13 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            <div className="flex flex-col gap-2 mt-4">
-              <Button variant="outline" className="w-full text-brand-dark border-brand-dark hover:bg-brand-dark/10">
-                Log In
-              </Button>
-              <Button className="w-full bg-brand-dark hover:bg-brand-dark/90">
-                Get Started
-              </Button>
+            <div className="mt-4">
+              <Link to="/get-a-quote" className="w-full">
+                <Button className="w-full bg-brand-green hover:bg-brand-green/90">
+                  Get a Custom Quote
+                  <Quote className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
