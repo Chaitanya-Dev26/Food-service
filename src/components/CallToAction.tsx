@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, School, GraduationCap, PartyPopper, Phone } from "lucide-react";
+import { ArrowRight, School, GraduationCap, PartyPopper, Phone, MessageCircle } from "lucide-react";
 
 const CallToAction = () => {
   const openWhatsApp = () => {
@@ -42,14 +42,35 @@ const CallToAction = () => {
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-brand-dark hover:bg-white/90">
+            <Button 
+              size="lg" 
+              className="bg-white text-brand-dark hover:bg-white/90 group transition-all duration-300 hover:scale-[1.02] shadow-md hover:shadow-lg px-4 py-2"
+              onClick={openWhatsApp}>
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    transition: { duration: 1.5, repeat: Infinity }
+                  }}
+                  className="mr-1"
+                >
+                  <motion.div
+                  animate={{
+                    scale: [1, 1.2, 1], // Pulse animation effect
+                    rotate: [0, 15, -15, 0], // Subtle rotation for added effect
+                    transition: { duration: 0.6, repeat: Infinity, repeatDelay: 0.5 }
+                  }}
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                  </motion.div>
+                </motion.div>
                 Schedule a Consultation
-              </Button>
+            </Button>
+
+
               <Button
                 size="lg"
                 variant="outline"
-                className="text-black border-gray-200 hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition-colors duration-200 group"
-              >
+                className="text-black border-gray-200 hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition-colors duration-200 group" >
                 Download Brochure 
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
