@@ -34,11 +34,8 @@ const Navbar = () => {
         </nav>
         
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="outline" className="text-brand-dark border-brand-dark hover:bg-brand-dark/10">
-            Log In
-          </Button>
           <Button className="bg-brand-dark hover:bg-brand-dark/90">
-            Get Started
+            Get a Custom Quote
           </Button>
         </div>
 
