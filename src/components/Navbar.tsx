@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Scroll event to change navbar style when scrolling
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -15,6 +16,14 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Scroll to the quote form when button is clicked
+  const handleQuoteClick = () => {
+    const formSection = document.getElementById("quote-form");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
@@ -48,12 +57,13 @@ const Navbar = () => {
         </nav>
         
         <div className="hidden md:flex items-center">
-          <Link to="/get-a-quote">
-            <Button className="bg-brand-green hover:bg-brand-green/90 transition-all duration-300 hover:scale-105 group">
-              Get a Custom Quote
-              <Quote className="ml-2 h-4 w-4 transition-transform group-hover:rotate-12" />
-            </Button>
-          </Link>
+          <Button 
+            onClick={handleQuoteClick} // Trigger smooth scroll on click
+            className="bg-brand-green hover:bg-brand-green/90 transition-all duration-300 hover:scale-105 group"
+          >
+            Get a Custom Quote
+            <Quote className="ml-2 h-4 w-4 transition-transform group-hover:rotate-12" />
+          </Button>
         </div>
 
         {/* Mobile menu button */}
@@ -100,12 +110,13 @@ const Navbar = () => {
               Contact
             </Link>
             <div className="mt-4">
-              <Link to="/get-a-quote" className="w-full">
-                <Button className="w-full bg-brand-green hover:bg-brand-green/90">
-                  Get a Custom Quote
-                  <Quote className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+              <Button 
+                onClick={handleQuoteClick} // Trigger smooth scroll on mobile as well
+                className="w-full bg-brand-green hover:bg-brand-green/90"
+              >
+                Get a Custom Quote
+                <Quote className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </div>
         </div>
