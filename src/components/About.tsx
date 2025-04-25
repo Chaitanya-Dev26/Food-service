@@ -1,8 +1,7 @@
 import React from 'react';
-import { motion } from "framer-motion";
-import { Building, Users, Star, Award, Globe } from "lucide-react";
-import Navbar from "@/components/Navbar"; // adjust the path if needed
-import Footer from "@/components/Footer"; // adjust the path if needed
+import { Salad, School, Clock, ChefHat, Earth, Heart } from "lucide-react"; // Added Heart for "Meaningful Moments"
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const About = () => {
   return (
@@ -10,40 +9,62 @@ const About = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] bg-brand-green mt-16"> {/* Added mt-16 to avoid being hidden under fixed navbar */}
+      <section className="relative h-[45vh] bg-brand-green mt-16">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto h-full flex items-center justify-center relative z-10">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Transforming School Food Service</h1>
-            <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-              We're reimagining institutional dining with fresh ingredients and innovative solutions.
-            </p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Bringing Flavor to Every Celebration</h1>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 flex-grow">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-brand-dark">Our Mission</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                At Campus Kitchen Crafter, we're on a mission to revolutionize institutional dining. 
-                We believe that quality food service can transform the educational experience and build 
-                stronger communities.
-              </p>
-              <p className="text-lg text-gray-600">
-                Our commitment to fresh ingredients, sustainable practices, and innovative solutions 
-                has made us a trusted partner for schools and institutions across the country.
+      <section className="py-20 bg-[#fdfcf8]">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-20 text-gray-800">Our Values</h2>
+
+          {/* Top Row - 3 items */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-20 max-w-6xl mx-auto mb-16">
+            <div className="flex flex-col items-center text-center">
+              <Salad className="w-[171px] h-[160px] text-green-800 mb-6" />
+              <h3 className="font-semibold text-lg mb-1">Fresh & Healthy</h3>
+              <p className="text-black text-sm max-w-xs">
+                We serve nutritious meals made with fresh, quality ingredients—no compromises.
               </p>
             </div>
-            <div className="relative rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-                alt="Mission" 
-                className="w-full h-[400px] object-cover"
-              />
+
+            <div className="flex flex-col items-center text-center">
+              <School className="w-[171px] h-[160px] text-green-800 mb-6" />
+              <h3 className="font-semibold text-lg mb-1">Student-Focused</h3>
+              <p className="text-black text-sm max-w-xs">
+                Portions, menus, and nutrition tailored for school and college needs.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <Clock className="w-[171px] h-[160px] text-green-800 mb-6" />
+              <h3 className="font-semibold text-lg mb-1">Reliable Delivery</h3>
+              <p className="text-black text-sm max-w-xs">
+                On-time meal delivery and consistent quality—every single day.
+              </p>
+            </div>
+          </div>
+
+          {/* Bottom Row - 2 items centered */}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-20 max-w-4xl mx-auto">
+            <div className="flex flex-col items-center text-center">
+              <Earth className="w-[171px] h-[160px] text-green-800 mb-6" />
+              <h3 className="font-semibold text-lg mb-1">Sustainable Practices</h3>
+              <p className="text-black text-sm max-w-xs">
+                Eco-conscious operations with minimal waste and responsible sourcing.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <Heart className="w-[171px] h-[160px] text-green-800 mb-6" />
+              <h3 className="font-semibold text-lg mb-1">Meaningful Moments</h3>
+              <p className="text-black text-sm max-w-xs">
+                Helping students bond over delicious meals and shared experiences.
+              </p>
             </div>
           </div>
         </div>
