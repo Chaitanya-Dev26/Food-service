@@ -60,10 +60,10 @@ const About = () => {
             </div>
 
             <div className="flex flex-col items-center text-center">
-              <Heart className="w-[171px] h-[160px] text-green-800 mb-6" />
-              <h3 className="font-semibold text-lg mb-1">Meaningful Moments</h3>
+              <ChefHat className="w-[171px] h-[160px] text-green-800 mb-6" />
+              <h3 className="font-semibold text-lg mb-1">Professional Catering</h3>
               <p className="text-black text-sm max-w-xs">
-                Helping students bond over delicious meals and shared experiences.
+              Expert food service for school events, functions, and special occasions.
               </p>
             </div>
           </div>
