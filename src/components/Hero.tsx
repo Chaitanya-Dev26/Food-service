@@ -9,7 +9,6 @@ const Hero = () => {
   const floatingElement2 = useRef(null);
   const floatingElement3 = useRef(null);
 
-  // 👇 Mouse-based gentle float
   useEffect(() => {
     let requestId;
     const handleMouseMove = (e) => {
@@ -43,7 +42,6 @@ const Hero = () => {
     <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-br from-brand-green/5 via-white to-brand-orange/5">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center">
-          
           {/* Left Content */}
           <motion.div
             className="w-full lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0"
@@ -123,20 +121,29 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Floating Items */}
-            <div ref={floatingElement1} className="absolute -top-10 -right-6 p-4 bg-brand-orange rounded-lg shadow-xl hidden lg:block transition-all duration-500">
+            {/* Floating Items (Now Visible and Responsive) */}
+            <div
+              ref={floatingElement1}
+              className="absolute top-2 right-2 sm:-top-10 sm:-right-6 p-3 sm:p-4 bg-brand-orange rounded-lg shadow-xl transition-all duration-500 z-30"
+            >
               <div className="text-white text-center relative">
-                <div className="font-bold text-xl">100%</div>
-                <div className="text-sm">Fresh organic<br />ingredients</div>
+                <div className="font-bold text-lg sm:text-xl">100%</div>
+                <div className="text-xs sm:text-sm leading-tight">Fresh organic<br />ingredients</div>
               </div>
             </div>
 
-            <div ref={floatingElement2} className="absolute -bottom-5 -left-5 p-3 rounded-full bg-brand-green/90 text-white shadow-lg hidden lg:block">
-              <Apple size={24} />
+            <div
+              ref={floatingElement2}
+              className="absolute bottom-2 left-2 sm:-bottom-5 sm:-left-5 p-2 sm:p-3 rounded-full bg-brand-green/90 text-white shadow-lg transition-all duration-500 z-30"
+            >
+              <Apple size={20} className="sm:size-6" />
             </div>
 
-            <div ref={floatingElement3} className="absolute top-1/4 -right-8 p-3 rounded-full bg-brand-yellow/90 text-white shadow-lg hidden lg:block">
-              <Carrot size={24} />
+            <div
+              ref={floatingElement3}
+              className="absolute top-1/3 right-0 sm:-right-8 p-2 sm:p-3 rounded-full bg-brand-yellow/90 text-white shadow-lg transition-all duration-500 z-30"
+            >
+              <Carrot size={20} className="sm:size-6" />
             </div>
           </motion.div>
         </div>
