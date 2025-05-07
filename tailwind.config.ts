@@ -70,6 +70,7 @@ export default {
 				'brand-yellow': '#FFC107',
 				'brand-gray': '#F5F5F5',
 				'brand-dark': 'rgb(36, 36, 36)',
+				'custom-beige': 'rgb(252, 238, 219)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
