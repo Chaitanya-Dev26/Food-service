@@ -45,10 +45,10 @@ const servicePackages = [
 const ServicePackages = () => {
   return (
     <section className="py-20 bg-white" id="packages">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold text-gray-900">Our Delicious Menu</h2>
-          <p className="mt-2 text-base text-gray-600 max-w-xl mx-auto">
+      <div className="container mx-auto">
+      <div className="text-center mb-16">
+          <h2 className="section-heading text-gray-900">Our Delicious Menu</h2>
+          <p className="section-subheading text-brand-dark/80">
             Explore our diverse offerings designed to satisfy all taste preferences and dietary requirements
           </p>
         </div>
