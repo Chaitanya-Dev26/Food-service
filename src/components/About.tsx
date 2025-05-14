@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import about1 from "@/assets/about1.jpeg";
 import CEO from "@/assets/CEO.png";
+import aboutus3 from "@/assets/aboutus3.png";
 
 const About = () => {
   return (
@@ -113,15 +114,17 @@ const About = () => {
                 We’re here to change how students eat by delivering fresh, nutritious meals tailored for schools and colleges. 
                 With a focus on sustainability, reliability, and care—we don’t just deliver food; we deliver better habits.
               </p>
-              <button className="mt-8 bg-brand-dark px-3 py-2 rounded-lg hover:bg-brand-dark/90 text-white transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl">
-                Get a Custom Quote
-              </button>
+              <div className="flex justify-start ">
+                <button className="mt-8 bg-brand-dark px-[12rem] py-3 rounded-lg hover:bg-brand-dark/90 text-white">
+                  Get a Custom Quote
+                </button>
+              </div>
             </div>
 
             {/* Optional Illustration */}
             <div className="lg:w-1/2 flex justify-center">
               <img
-                src={about1}
+                src={aboutus3}
                 alt="Sustainability"
                 className="w-full max-w-md"
               />
@@ -143,17 +146,17 @@ const About = () => {
             </div>
 
           {/* Right Text */}
-          <div className="w-full lg:w-1/2 p-6 lg:pr-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+          <div className="w-full lg:w-1/2 p-6 lg:pr-9">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
               How We Got Here
             </h2>
-            <p className="text-[15px] text-gray-700 mb-5">
+            <p className="text-[15px] text-gray-700 mb-6">
             In 2011, our founders Dominik and Thomas spent afternoons
             packing pre-portioned recipe ingredients for their community. 
             Their purpose? To test a new way to get home cooked meals on tables 
             around the world.
             </p>
-            <p className="text-[15px] text-gray-700 mb-5">
+            <p className="text-[15px] text-gray-700 mb-6">
             Little by little, their experiment became a real business that changed
              the way people eat. With love and dedication, HelloFresh went from a small, 
              home-grown project to a meal kit service spanning 18 countries and over 1 
@@ -165,6 +168,10 @@ const About = () => {
             </p>
           </div>
         </div>
+      </section>
+
+      <section>
+
       </section>
       <Footer />
     </div>
